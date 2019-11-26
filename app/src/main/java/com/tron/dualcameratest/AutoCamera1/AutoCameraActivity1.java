@@ -62,6 +62,7 @@ public class AutoCameraActivity1 extends AppCompatActivity {
         // 引用时间戳命名，进行备份储存，返回路径
         String imgBackupPath = ImageUtils.saveImage(imgFileName, Config.Image);
         System.out.println("备份图片路径:" + imgBackupPath);
+        Toast.makeText(this, "备份图片路径:"+imgBackupPath, Toast.LENGTH_LONG).show();
 
         // 将本地JPG转换为base64，返回String
         String imgBase64 = ImageUtils.imageToBase64(imgBackupPath);
